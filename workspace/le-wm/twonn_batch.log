@@ -1,0 +1,123 @@
+===> batch start at Fri May 15 09:45:09 UTC 2026
+
+===> [1/8] 09:45:09 BEGIN v5_baseline_40K
+09:45:16.830 | INFO    (1761, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  sample 0: lam_max=1.4607  n_unstable=1  abscissa=1.4607
+  sample 1: lam_max=1.4703  n_unstable=1  abscissa=1.4703
+  sample 2: lam_max=1.8112  n_unstable=1  abscissa=1.8112
+  sample 3: lam_max=1.7065  n_unstable=1  abscissa=1.7065
+  sample 4: lam_max=1.9953  n_unstable=1  abscissa=1.9953
+  sample 5: lam_max=2.2967  n_unstable=1  abscissa=2.2967
+  collecting latents for TwoNN...
+  TwoNN intrinsic_dim = 3.42  (N=2048, D=192)
+  wrote spectral_eig + twonn_intrinsic_dim -> /workspace/lewm_autodl_results_v5/v5_baseline_40K/final_analyses.json
+===> [1/8] DONE v5_baseline_40K in 24s
+
+===> [2/8] 09:45:33 BEGIN v5_uvlowr_40K
+09:45:40.207 | INFO    (1814, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  sample 0: lam_max=1.2928  n_unstable=1  abscissa=1.2928
+  sample 1: lam_max=1.2361  n_unstable=1  abscissa=1.2361
+  sample 2: lam_max=1.3639  n_unstable=1  abscissa=1.3639
+  sample 3: lam_max=1.3770  n_unstable=1  abscissa=1.3770
+  sample 4: lam_max=1.4436  n_unstable=1  abscissa=1.4436
+  sample 5: lam_max=1.7406  n_unstable=3  abscissa=1.7406
+  collecting latents for TwoNN...
+  TwoNN intrinsic_dim = 3.42  (N=2048, D=192)
+  wrote spectral_eig + twonn_intrinsic_dim -> /workspace/lewm_autodl_results_v5/v5_uvlowr_40K/final_analyses.json
+===> [2/8] DONE v5_uvlowr_40K in 23s
+
+===> [3/8] 09:45:56 BEGIN baseline_long
+09:46:03.561 | INFO    (1863, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  sample 0: lam_max=0.7503  n_unstable=0  abscissa=0.7503
+  sample 1: lam_max=0.7496  n_unstable=0  abscissa=0.7496
+  sample 2: lam_max=0.7480  n_unstable=0  abscissa=0.7480
+  sample 3: lam_max=0.7477  n_unstable=0  abscissa=0.7477
+  sample 4: lam_max=0.7508  n_unstable=0  abscissa=0.7508
+  sample 5: lam_max=0.7593  n_unstable=0  abscissa=0.7593
+  collecting latents for TwoNN...
+  TwoNN intrinsic_dim = 5.18  (N=2048, D=192)
+  wrote spectral_eig + twonn_intrinsic_dim -> /workspace/stablewm_home/baseline_long/final_analyses.json
+===> [3/8] DONE baseline_long in 24s
+
+===> [4/8] 09:46:20 BEGIN uvlowr_r4_long
+09:46:25.542 | INFO    (1912, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  sample 0: lam_max=0.7330  n_unstable=0  abscissa=0.7330
+  sample 1: lam_max=0.7307  n_unstable=0  abscissa=0.7307
+  sample 2: lam_max=0.7330  n_unstable=0  abscissa=0.7330
+  sample 3: lam_max=0.7349  n_unstable=0  abscissa=0.7349
+  sample 4: lam_max=0.7337  n_unstable=0  abscissa=0.7337
+  sample 5: lam_max=0.7428  n_unstable=0  abscissa=0.7428
+  collecting latents for TwoNN...
+  TwoNN intrinsic_dim = 4.95  (N=2048, D=192)
+  wrote spectral_eig + twonn_intrinsic_dim -> /workspace/stablewm_home/uvlowr_r4_long/final_analyses.json
+===> [4/8] DONE uvlowr_r4_long in 23s
+
+===> [5/8] 09:46:43 BEGIN randdiff_lam001_long
+09:46:49.335 | INFO    (1961, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  sample 0: lam_max=0.7795  n_unstable=0  abscissa=0.7795
+  sample 1: lam_max=0.7853  n_unstable=0  abscissa=0.7853
+  sample 2: lam_max=0.7768  n_unstable=0  abscissa=0.7768
+  sample 3: lam_max=0.7823  n_unstable=0  abscissa=0.7823
+  sample 4: lam_max=0.7855  n_unstable=0  abscissa=0.7855
+  sample 5: lam_max=0.7941  n_unstable=0  abscissa=0.7941
+  collecting latents for TwoNN...
+  TwoNN intrinsic_dim = 5.47  (N=2048, D=192)
+  wrote spectral_eig + twonn_intrinsic_dim -> /workspace/stablewm_home/randdiff_lam001_long/final_analyses.json
+===> [5/8] DONE randdiff_lam001_long in 22s
+
+===> [6/8] 09:47:05 BEGIN tier1_baseline
+09:47:11.853 | INFO    (2010, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  sample 0: lam_max=1.2106  n_unstable=3  abscissa=1.2106
+  sample 1: lam_max=1.2566  n_unstable=3  abscissa=1.2566
+  sample 2: lam_max=1.2646  n_unstable=3  abscissa=1.2646
+  sample 3: lam_max=1.2843  n_unstable=3  abscissa=1.2843
+  sample 4: lam_max=1.3109  n_unstable=3  abscissa=1.3109
+  sample 5: lam_max=1.2637  n_unstable=3  abscissa=1.2637
+  collecting latents for TwoNN...
+  TwoNN intrinsic_dim = 3.42  (N=2048, D=192)
+  wrote spectral_eig + twonn_intrinsic_dim -> /workspace/stablewm_home/tier1_baseline/final_analyses.json
+===> [6/8] DONE tier1_baseline in 23s
+
+===> [7/8] 09:47:28 BEGIN tier1_uvlowr
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  sample 0: lam_max=1.2888  n_unstable=3  abscissa=1.2888
+  sample 1: lam_max=1.3081  n_unstable=4  abscissa=1.3081
+  sample 2: lam_max=1.3237  n_unstable=4  abscissa=1.3237
+  sample 3: lam_max=1.3200  n_unstable=4  abscissa=1.3200
+  sample 4: lam_max=1.3403  n_unstable=4  abscissa=1.3403
+  sample 5: lam_max=1.3318  n_unstable=4  abscissa=1.3318
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 3.42  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 3.54  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/stablewm_home/tier1_uvlowr/final_analyses.json
+===> [7/8] DONE tier1_uvlowr in 36s
+
+===> [8/8] 09:48:04 BEGIN tier1_randdiff
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  sample 0: lam_max=0.7604  n_unstable=0  abscissa=0.7604
+  sample 1: lam_max=0.7656  n_unstable=0  abscissa=0.7656
+  sample 2: lam_max=0.7709  n_unstable=0  abscissa=0.7709
+  sample 3: lam_max=0.7746  n_unstable=0  abscissa=0.7746
+  sample 4: lam_max=0.7764  n_unstable=0  abscissa=0.7764
+  sample 5: lam_max=0.7746  n_unstable=0  abscissa=0.7746
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 3.42  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 3.52  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/stablewm_home/tier1_randdiff/final_analyses.json
+===> [8/8] DONE tier1_randdiff in 38s
+
+===> batch complete at Fri May 15 09:48:42 UTC 2026

@@ -1,0 +1,53 @@
+{
+  "ckpt": "/workspace/lewm_autodl_results_v3/stage1_baseline_seed0_weights.ckpt",
+  "n_episodes": 100,
+  "z_cls": {
+    "name": "z_cls  (encoder CLS, pre-projector)",
+    "n_samples": 12555,
+    "dim": 192,
+    "norm_mean": 13.953839302062988,
+    "norm_std": 0.00024615839356556535,
+    "norm_p10": 13.9535493850708,
+    "norm_p50": 13.953845024108887,
+    "norm_p90": 13.95410442352295,
+    "norm_min": 13.952457427978516,
+    "norm_max": 13.955424308776855,
+    "per_dim_std_mean": 0.021031184121966362
+  },
+  "z_proj": {
+    "name": "z_proj (post-projector \u2014 predictor input)",
+    "n_samples": 12555,
+    "dim": 192,
+    "norm_mean": 33.28140640258789,
+    "norm_std": 0.13354836404323578,
+    "norm_p10": 33.16323471069336,
+    "norm_p50": 33.29568099975586,
+    "norm_p90": 33.40869903564453,
+    "norm_min": 31.912513732910156,
+    "norm_max": 33.793426513671875,
+    "per_dim_std_mean": 0.05493348836898804
+  },
+  "epsilon_bracket": [
+    {
+      "eps": 0.0125,
+      "label": "\u03b5_1 (\u00bc \u00d7 v3)",
+      "frac": 0.0003755850894278322
+    },
+    {
+      "eps": 0.05,
+      "label": "\u03b5_2 = v3",
+      "frac": 0.0015023403577113289
+    },
+    {
+      "eps": 0.2,
+      "label": "\u03b5_3 (4\u00d7 v3)",
+      "frac": 0.0060093614308453155
+    },
+    {
+      "eps": 0.8,
+      "label": "\u03b5_4 (16\u00d7 v3)",
+      "frac": 0.024037445723381262
+    }
+  ],
+  "note": "v3 used \u03b5=0.05 unrescaled. The four \u03b5 values span 64\u00d7 geometric range around v3's value. B1 runs frozen_randdiff at each \u03b5 with seed 0, 8K steps, on v3 Stage-1 ckpt. Looking for v2-like \u03c3\u2081 inflation at any \u03b5; absence at all 4 falsifies Anti-claim A."
+}

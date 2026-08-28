@@ -1,0 +1,15 @@
+- data=pusht
+- seed=2
+- loader.batch_size=16
+- loader.num_workers=0
+- loader.persistent_workers=False
+- loader.pin_memory=False
+- loader.prefetch_factor=null
+- trainer.max_epochs=1
+- +trainer.limit_train_batches=500
+- +trainer.limit_val_batches=20
+- wandb.enabled=False
+- output_model_name=randdiff_seed2
+- +loss.rand_diff.weight=0.01
+- +loss.rand_diff.eps=0.05
+- +loss.rand_diff.num_dirs=2

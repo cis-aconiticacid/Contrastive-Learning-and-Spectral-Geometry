@@ -1,0 +1,56 @@
+{
+  "ckpt": "/workspace/stablewm_home/randdiff_seed0/randdiff_seed0_epoch_1_object.ckpt",
+  "weights": "/workspace/stablewm_home/randdiff_seed0/randdiff_seed0_weights.ckpt",
+  "rollout_horizons": [
+    1,
+    5,
+    10,
+    20,
+    50
+  ],
+  "rollout_results": [
+    {
+      "horizon": 1,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 5,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 10,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 20,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 50,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    }
+  ],
+  "rollout_eval_seconds": 0.0015861988067626953,
+  "probe": {
+    "n_train": 1024,
+    "n_test": 256,
+    "overall_r2": 0.8633180260658264,
+    "per_dim_r2": [
+      0.9611534476280212,
+      0.9850148558616638,
+      0.9566192626953125,
+      0.9818177819252014,
+      0.9963711500167847,
+      0.7435380220413208,
+      0.41871196031570435
+    ],
+    "mse": 0.11748617887496948,
+    "ridge_alpha": 1.0
+  },
+  "probe_eval_seconds": 32.464624643325806
+}

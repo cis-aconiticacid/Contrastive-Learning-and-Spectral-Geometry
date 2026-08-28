@@ -1,0 +1,17 @@
+- data=pusht
+- loader.batch_size=16
+- loader.num_workers=0
+- loader.persistent_workers=False
+- loader.pin_memory=False
+- loader.prefetch_factor=null
+- trainer.max_epochs=1
+- +trainer.limit_train_batches=300
+- +trainer.limit_val_batches=4
+- wandb.enabled=False
+- +probe_every=100
+- +jacobian_probe_n_samples=4
+- +probing_n_train=128
+- +probing_n_test=32
+- +latent_cov_n_samples=128
+- +predictor.ffn_rank=4
+- output_model_name=smoke_v2

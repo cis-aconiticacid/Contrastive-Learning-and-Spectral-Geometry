@@ -1,0 +1,37 @@
+===> [tier1] train tier1_baseline (3000 steps, batch=8, seed=0)
+03:14:02.789 | INFO    (1421, stable_pretraining.callbacks.checkpoint_sklearn) | Checking for Wandb params to save... Done!
+`Trainer.fit` stopped: `max_epochs=1` reached.
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[jac@ 3000] spec=2.584 sr=19.6 er=107.8
+[probe@ 3000] R²=0.3383  per-dim=[0.70,0.72,0.82,0.81,0.00,-0.75,0.07]
+[lcov@ 3000] trace=188.430 sr=7.57 er=11.47
+Epoch 0/0  ━━━━━━━━━━━━━━━━━━━ 3000/3000 0:06:18 • 0:00:00 8.44it/s v_num: 0.000
+===> tier1_baseline done in 365s
+===> [tier1] train tier1_uvlowr (3000 steps, batch=8, seed=0)
+03:19:57.255 | INFO    (1545, stable_pretraining.callbacks.checkpoint_sklearn) | Checking for Wandb params to save... Done!
+`Trainer.fit` stopped: `max_epochs=1` reached.
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[jac@ 3000] spec=2.387 sr=20.0 er=109.0
+[probe@ 3000] R²=0.3383  per-dim=[0.70,0.72,0.82,0.81,0.00,-0.75,0.07]
+[lcov@ 3000] trace=188.430 sr=7.57 er=11.47
+Epoch 0/0  ━━━━━━━━━━━━━━━━━━━ 3000/3000 0:06:05 • 0:00:00 7.88it/s v_num: 0.000
+===> tier1_uvlowr done in 355s
+===> [tier1] train tier1_randdiff (3000 steps, batch=8, seed=0)
+03:27:37.398 | INFO    (1649, stable_pretraining.callbacks.checkpoint_sklearn) | Checking for Wandb params to save... Done!
+`Trainer.fit` stopped: `max_epochs=1` reached.
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[jac@ 3000] spec=2.015 sr=22.8 er=114.9
+[probe@ 3000] R²=0.3383  per-dim=[0.70,0.72,0.82,0.81,0.00,-0.75,0.07]
+[lcov@ 3000] trace=188.430 sr=7.57 er=11.47
+Epoch 0/0  ━━━━━━━━━━━━━━━━━━━ 3000/3000 0:08:00 • 0:00:00 6.78it/s v_num: 0.000
+===> tier1_randdiff done in 469s
+===> Tier-1 training complete
+-rw-r--r-- 1 root root 191 May 12 03:14 /workspace/stablewm_home/tier1_baseline/engineering_metrics.json
+-rw-r--r-- 1 root root 70M May 12 03:14 /workspace/stablewm_home/tier1_baseline/tier1_baseline_epoch_1_object.ckpt
+-rw-r--r-- 1 root root 193 May 12 03:27 /workspace/stablewm_home/tier1_randdiff/engineering_metrics.json
+-rw-r--r-- 1 root root 70M May 12 03:27 /workspace/stablewm_home/tier1_randdiff/tier1_randdiff_epoch_1_object.ckpt
+-rw-r--r-- 1 root root 189 May 12 03:19 /workspace/stablewm_home/tier1_uvlowr/engineering_metrics.json
+-rw-r--r-- 1 root root 52M May 12 03:19 /workspace/stablewm_home/tier1_uvlowr/tier1_uvlowr_epoch_1_object.ckpt

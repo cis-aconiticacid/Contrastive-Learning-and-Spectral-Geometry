@@ -1,0 +1,56 @@
+{
+  "ckpt": "/workspace/stablewm_home/uvlowr_r4_seed0/uvlowr_r4_seed0_epoch_1_object.ckpt",
+  "weights": "/workspace/stablewm_home/uvlowr_r4_seed0/uvlowr_r4_seed0_weights.ckpt",
+  "rollout_horizons": [
+    1,
+    5,
+    10,
+    20,
+    50
+  ],
+  "rollout_results": [
+    {
+      "horizon": 1,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 5,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 10,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 20,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 50,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    }
+  ],
+  "rollout_eval_seconds": 0.0014731884002685547,
+  "probe": {
+    "n_train": 1024,
+    "n_test": 256,
+    "overall_r2": 0.8147420883178711,
+    "per_dim_r2": [
+      0.9516148567199707,
+      0.9817599654197693,
+      0.927061915397644,
+      0.9613341689109802,
+      0.9961890578269958,
+      0.6378741264343262,
+      0.24736034870147705
+    ],
+    "mse": 0.1560405045747757,
+    "ridge_alpha": 1.0
+  },
+  "probe_eval_seconds": 30.06627869606018
+}

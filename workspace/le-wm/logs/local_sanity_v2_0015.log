@@ -1,0 +1,30 @@
+##### M0 quick sanity (200-step frozen_baseline check) #####
+===> [00:15:37] train_frozen autodl_sanity  steps=200  overrides: 
+    _ = ret.return_value
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/workspace/le-wm/train.py", line 111, in run
+    train = torch.utils.data.DataLoader(train_set, **cfg.loader,shuffle=True, drop_last=True, generator=rnd_gen)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 270, in __init__
+    raise ValueError(
+ValueError: prefetch_factor option could only be specified in multiprocessing.let num_workers > 0 to enable multiprocessing, otherwise set prefetch_factor to None.
+===> eval_rollout autodl_sanity
+    main()
+  File "/workspace/le-wm/eval_rollout.py", line 276, in main
+    cfg = OmegaConf.load(cfg_path)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/omegaconf/omegaconf.py", line 189, in load
+    with io.open(os.path.abspath(file_), "r", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/autodl_sanity/config.yaml'
+===> final_analyses autodl_sanity
+    main()
+  File "/workspace/le-wm/final_analyses.py", line 225, in main
+    wm, cfg = build_world_model_and_load(ckpt_path, device)
+  File "/workspace/le-wm/final_analyses.py", line 158, in build_world_model_and_load
+    cfg = OmegaConf.load(ckpt_path.parent / "config.yaml")
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/omegaconf/omegaconf.py", line 189, in load
+    with io.open(os.path.abspath(file_), "r", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/autodl_sanity/config.yaml'
+===> [00:15:56] autodl_sanity done in 19s
+===> [00:15:56] v5 pipeline phase=sanity-quick COMPLETE

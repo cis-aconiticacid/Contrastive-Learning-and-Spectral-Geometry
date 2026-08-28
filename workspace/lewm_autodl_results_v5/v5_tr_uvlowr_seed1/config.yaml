@@ -1,0 +1,78 @@
+output_model_name: v5_tr_uvlowr_seed1
+subdir: ${hydra:job.id}
+num_workers: 6
+train_split: 0.9
+seed: 1
+img_size: 224
+patch_size: 14
+encoder_scale: tiny
+dump_object: true
+trainer:
+  max_epochs: 1
+  devices: auto
+  accelerator: gpu
+  precision: bf16
+  gradient_clip_val: 1.0
+  limit_train_batches: 8000
+  limit_val_batches: 20
+loader:
+  batch_size: 32
+  num_workers: 4
+  persistent_workers: true
+  prefetch_factor: 2
+  pin_memory: true
+optimizer:
+  type: AdamW
+  lr: 5.0e-05
+  weight_decay: 0.001
+wandb:
+  enabled: false
+  config:
+    entity: lewm
+    project: lewm
+    name: ${output_model_name}
+    id: ${subdir}
+    resume: allow
+    log_model: false
+wm:
+  type: lewm
+  history_size: 3
+  num_preds: 1
+  embed_dim: 192
+  action_dim: 2
+  proprio_dim: 2
+predictor:
+  depth: 6
+  heads: 16
+  mlp_dim: 2048
+  dim_head: 64
+  dropout: 0.1
+  emb_dropout: 0.0
+  ffn_rank: 4
+loss:
+  sigreg:
+    weight: 0.09
+    kwargs:
+      knots: 17
+      num_proj: 1024
+data:
+  dataset:
+    num_steps: ${eval:'${wm.num_preds} + ${wm.history_size}'}
+    frameskip: 5
+    name: tworoom
+    keys_to_load:
+    - pixels
+    - action
+    - proprio
+    keys_to_cache:
+    - action
+    - proprio
+probe_every: 500
+jacobian_probe_n_samples: 6
+probing_n_train: 256
+probing_n_test: 64
+latent_cov_n_samples: 256
+freeze:
+  enabled: true
+  stage1_ckpt: /workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_weights.ckpt
+  skip_sigreg: true

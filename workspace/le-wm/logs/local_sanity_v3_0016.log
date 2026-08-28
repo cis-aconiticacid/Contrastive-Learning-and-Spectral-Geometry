@@ -1,0 +1,30 @@
+##### M0 quick sanity (200-step frozen_baseline check) #####
+===> [00:16:28] train_frozen autodl_sanity  steps=200  overrides: 
+00:18:02.529 | INFO    (945, stable_pretraining.callbacks.checkpoint_sklearn) | Checking for non PyTorch modules to save... 🔧
+00:18:02.529 | INFO    (945, stable_pretraining.callbacks.checkpoint_sklearn) | Checking for Wandb params to save... 🔧
+00:18:02.529 | INFO    (945, stable_pretraining.callbacks.checkpoint_sklearn) | Checking for Wandb params to save... Done!
+`Trainer.fit` stopped: `max_epochs=1` reached.
+/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/autograd/graph.py:823: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_scaled_dot_product_efficient_attention_backward. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:81.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[jac@  200] spec=1.799 sr=24.0 er=115.1
+[probe@  200] R²=0.4703  per-dim=[0.81,0.63,0.89,0.89,0.26,-0.04,-0.14]
+[lcov@  200] trace=190.550 sr=8.13 er=11.72
+Epoch 0/0  ━━━━━━━━━━━━━━━━━━━━━ 200/200 0:01:08 • 0:00:00 3.06it/s v_num: 0.000
+===> eval_rollout autodl_sanity
+00:18:28.554 | INFO    (1027, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+00:18:28.586 | INFO    (1027, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8329  mse=0.14640
+  per-dim R²: [0.948, 0.977, 0.962, 0.984, 0.998, 0.663, 0.297]
+
+saved /workspace/stablewm_home/autodl_sanity/eval.json
+===> final_analyses autodl_sanity
+00:19:08.699 | INFO    (1072, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+00:19:08.800 | INFO    (1072, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+00:19:08.987 | INFO    (1072, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8472
+  MLP   overall R² = 0.9234  (Δ = +0.0762)
+  per-dim Δ (MLP - Ridge) = ['+0.018', '+0.007', '-0.018', '-0.004', '+0.000', '+0.143', '+0.388']
+
+Saved /workspace/stablewm_home/autodl_sanity/final_analyses.json
+===> [00:20:00] autodl_sanity done in 212s
+===> [00:20:00] v5 pipeline phase=sanity-quick COMPLETE

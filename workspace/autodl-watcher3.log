@@ -1,0 +1,19 @@
+
+=== waiting on setup (/workspace/setup_done) ===
+
+>>> setup finished with EXIT=0
+
+=== verifying setup ===
+OK 2.6.0+cu124 True
+-rw-r--r-- 1 root root 46300921856 May 10 06:01 /workspace/stablewm_home/pusht_expert_train.h5
+
+
+=== launching run_full.sh 40000 500 32 ===
+4331 bash -c cd /workspace/le-wm && rm -f /workspace/run_full.log /workspace/run_full_done && nohup bash -c "./run_full.sh 40000 500 32 > /workspace/run_full.log 2>&1; echo EXIT=\$? > /workspace/run_full_done" >/dev/null 2>&1 &
+4333 bash -c ./run_full.sh 40000 500 32 > /workspace/run_full.log 2>&1; echo EXIT=$? > /workspace/run_full_done
+4334 /bin/bash ./run_full.sh 40000 500 32
+
+
+=== waiting on pipeline (/workspace/run_full_done) ===
+  [00:44:51] 3 /workspace/run_full.log
+===> train randdiff seed=0 (steps=40000)

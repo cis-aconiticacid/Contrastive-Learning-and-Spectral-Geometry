@@ -1,0 +1,56 @@
+{
+  "ckpt": "/workspace/stablewm_home/baseline_seed1/baseline_seed1_epoch_1_object.ckpt",
+  "weights": "/workspace/stablewm_home/baseline_seed1/baseline_seed1_weights.ckpt",
+  "rollout_horizons": [
+    1,
+    5,
+    10,
+    20,
+    50
+  ],
+  "rollout_results": [
+    {
+      "horizon": 1,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 5,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 10,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 20,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    },
+    {
+      "horizon": 50,
+      "mse_per_step": 0.0,
+      "n_samples": 0
+    }
+  ],
+  "rollout_eval_seconds": 0.0018525123596191406,
+  "probe": {
+    "n_train": 1024,
+    "n_test": 256,
+    "overall_r2": 0.8277579545974731,
+    "per_dim_r2": [
+      0.9547602534294128,
+      0.9847049117088318,
+      0.9484387040138245,
+      0.962059497833252,
+      0.9946212768554688,
+      0.6771025061607361,
+      0.27261871099472046
+    ],
+    "mse": 0.14680826663970947,
+    "ridge_alpha": 1.0
+  },
+  "probe_eval_seconds": 31.101389169692993
+}

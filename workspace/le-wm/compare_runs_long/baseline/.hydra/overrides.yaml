@@ -1,0 +1,11 @@
+- data=pusht
+- loader.batch_size=16
+- loader.num_workers=0
+- loader.persistent_workers=False
+- loader.pin_memory=False
+- loader.prefetch_factor=null
+- trainer.max_epochs=1
+- +trainer.limit_train_batches=500
+- +trainer.limit_val_batches=20
+- wandb.enabled=False
+- output_model_name=baseline_long

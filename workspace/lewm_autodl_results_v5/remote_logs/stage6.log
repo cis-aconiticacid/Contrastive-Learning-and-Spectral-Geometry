@@ -1,0 +1,10 @@
+==== STAGE 6 (manual): downloading lewm-pusht ====
+downloaded 13.14 GB in 764.8s
+==== decompress ====
+decompressed 46.30 GB in 259.9s
+total 45215760
+drwxr-xr-x 3 root root        4096 May 13 02:44 .
+drwxr-xr-x 5 root root        4096 May 13 02:40 ..
+drwxr-xr-x 3 root root        4096 May 13 02:27 .cache
+-rw-r--r-- 1 root root 46300921856 May 13 02:44 pusht_expert_train.h5
+==== STAGE 6 (manual) DONE ====

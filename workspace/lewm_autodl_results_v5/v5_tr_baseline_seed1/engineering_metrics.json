@@ -1,0 +1,8 @@
+{
+  "predictor_params": 10791360,
+  "encoder_params": 5501376,
+  "total_params": 18034478,
+  "peak_gpu_memory_mb": 2003.5107421875,
+  "wall_clock_s": 499.83337140083313,
+  "global_step": 8000
+}

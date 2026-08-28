@@ -1,0 +1,2 @@
+##### B0' — cross-seed noise floor (frozen_baseline seeds 2..6) #####
+===> [00:22:00] train_frozen v5_baseline_seed2  steps=8000  overrides: seed=2

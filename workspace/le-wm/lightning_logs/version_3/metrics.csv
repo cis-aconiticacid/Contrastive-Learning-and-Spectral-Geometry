@@ -1,0 +1,4 @@
+epoch,step,validate/loss_epoch,validate/loss_step,validate/pred_loss_epoch,validate/pred_loss_step,validate/sigreg_loss_epoch,validate/sigreg_loss_step
+,0,,0.6266581416130066,,0.03290814161300659,,6.59375
+,1,,0.6266962289810181,,0.03294624388217926,,6.59375
+0,9,0.6266771554946899,,0.032927192747592926,,6.59375,

@@ -1,0 +1,3 @@
+[2026-05-09 08:28:43,141][root][INFO] - Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+[2026-05-09 08:28:43,693][root][INFO] - Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+[2026-05-09 08:28:44,229][root][INFO] - Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'

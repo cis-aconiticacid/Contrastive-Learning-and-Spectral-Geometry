@@ -1,0 +1,110 @@
+{
+  "variant": "uvlowr_r4",
+  "n_seeds": 3,
+  "run_dirs": [
+    "/workspace/stablewm_home/uvlowr_r4_seed0",
+    "/workspace/stablewm_home/uvlowr_r4_seed1",
+    "/workspace/stablewm_home/uvlowr_r4_seed2"
+  ],
+  "engineering": {
+    "n_seeds": 3,
+    "predictor_params_mean": 6180288,
+    "predictor_params_std": 0.0,
+    "encoder_params_mean": 5501376,
+    "encoder_params_std": 0.0,
+    "total_params_mean": 13423406,
+    "total_params_std": 0.0,
+    "peak_gpu_memory_mb_mean": 3763.63037109375,
+    "peak_gpu_memory_mb_std": 0.0,
+    "wall_clock_s_mean": 3410.500883499781,
+    "wall_clock_s_std": 60.94635693896378,
+    "global_step_mean": 40000,
+    "global_step_std": 0.0
+  },
+  "eval": {
+    "rollout": [
+      {
+        "horizon": 1,
+        "mse_mean": 0.004879573680227622,
+        "mse_std": 0.00015592774891231927,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 3,
+        "mse_mean": 0.04264822400485476,
+        "mse_std": 0.016509608642553335,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 5,
+        "mse_mean": 0.08094883873127401,
+        "mse_std": 0.021974106166458025,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 10,
+        "mse_mean": 0.15459918230772018,
+        "mse_std": 0.045049884670187126,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 15,
+        "mse_mean": 0.4382863737021883,
+        "mse_std": 0.2854011674499857,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 20,
+        "mse_mean": 0.6400538658102354,
+        "mse_std": 0.6576215199888266,
+        "n_seeds": 3
+      }
+    ],
+    "probe": {
+      "n_seeds": 3,
+      "overall_r2_mean": 0.8814254204432169,
+      "overall_r2_std": 0.04240652697534403,
+      "mse_mean": 0.10685867567857106,
+      "mse_std": 0.03696279909464518,
+      "per_dim": [
+        {
+          "dim": 0,
+          "r2_mean": 0.9757192730903625,
+          "r2_std": 0.02734496034610705
+        },
+        {
+          "dim": 1,
+          "r2_mean": 0.989162822564443,
+          "r2_std": 0.010465480272248187
+        },
+        {
+          "dim": 2,
+          "r2_mean": 0.9809431036313375,
+          "r2_std": 0.003231884264987381
+        },
+        {
+          "dim": 3,
+          "r2_mean": 0.992908755938212,
+          "r2_std": 0.00268767835192553
+        },
+        {
+          "dim": 4,
+          "r2_mean": 0.9993336796760559,
+          "r2_std": 0.0001033429037061729
+        },
+        {
+          "dim": 5,
+          "r2_mean": 0.7280491987864176,
+          "r2_std": 0.07203384188387725
+        },
+        {
+          "dim": 6,
+          "r2_mean": 0.5038613080978394,
+          "r2_std": 0.18303416748210616
+        }
+      ]
+    }
+  },
+  "training_curve_n_steps": 820,
+  "jacobian_curve_n_steps": 81
+}

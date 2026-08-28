@@ -1,0 +1,30 @@
+##### M0 quick sanity (200-step frozen_baseline check) #####
+===> [00:08:02] train_frozen autodl_sanity  steps=200  overrides: 
+    res = self._popen.wait(timeout)
+  File "/root/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/multiprocessing/popen_fork.py", line 40, in wait
+    if not wait([self.sentinel], timeout):
+  File "/root/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/root/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 512) is killed by signal: Bus error. It is possible that dataloader's workers are out of shared memory. Please try to raise your shared memory limit.
+===> eval_rollout autodl_sanity
+Traceback (most recent call last):
+  File "/workspace/le-wm/eval_rollout.py", line 343, in <module>
+    main()
+  File "/workspace/le-wm/eval_rollout.py", line 283, in main
+    weights_ckpt = next(ckpt_path.parent.glob("*_weights.ckpt"))
+StopIteration
+===> final_analyses autodl_sanity
+Traceback (most recent call last):
+  File "/workspace/le-wm/final_analyses.py", line 310, in <module>
+    main()
+  File "/workspace/le-wm/final_analyses.py", line 225, in main
+    wm, cfg = build_world_model_and_load(ckpt_path, device)
+  File "/workspace/le-wm/final_analyses.py", line 177, in build_world_model_and_load
+    cand = next(ckpt_path.parent.glob("*_weights.ckpt"))
+StopIteration
+===> [00:09:27] autodl_sanity done in 85s
+===> [00:09:27] v5 pipeline phase=sanity-quick COMPLETE

@@ -1,0 +1,166 @@
+##### M0 quick sanity (200-step frozen_baseline check) #####
+===> [02:49:21] train_frozen autodl_sanity  steps=200  overrides: 
+02:49:51.756 | INFO    (6443, stable_pretraining.callbacks.cpu_offload) | Final statistics:
+02:49:51.756 | INFO    (6443, stable_pretraining.callbacks.cpu_offload) |   - Total checkpoints saved: 2
+02:49:51.756 | INFO    (6443, stable_pretraining.callbacks.cpu_offload) |   - Total time in offload: 0.23s
+02:49:51.756 | INFO    (6443, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+02:49:51.756 | INFO    (6443, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.11s
+02:49:51.756 | INFO    (6443, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+02:49:51.756 | SUCCESS (6443, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+02:49:51.756 | INFO    (6443, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━━━━ 200/200 0:00:12 • 0:00:00 16.25it/s v_num: 0.000
+02:49:52.019 | INFO    (6443, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> eval_rollout autodl_sanity
+02:50:12.358 | INFO    (6799, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+02:50:12.390 | INFO    (6799, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8329  mse=0.14640
+  per-dim R²: [0.948, 0.977, 0.962, 0.984, 0.998, 0.663, 0.297]
+
+saved /workspace/stablewm_home/autodl_sanity/eval.json
+===> final_analyses autodl_sanity
+02:50:53.564 | INFO    (7055, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+02:50:53.600 | INFO    (7055, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+02:50:53.654 | INFO    (7055, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8472
+  MLP   overall R² = 0.9242  (Δ = +0.0771)
+  per-dim Δ (MLP - Ridge) = ['+0.018', '+0.007', '-0.018', '-0.005', '+0.000', '+0.144', '+0.393']
+
+Saved /workspace/stablewm_home/autodl_sanity/final_analyses.json
+===> [02:51:55] autodl_sanity done in 154s
+##### B4' (AutoDL) — frozen_baseline_40K #####
+===> [02:51:55] train_frozen v5_baseline_40K  steps=40000  overrides: 
+03:33:53.021 | INFO    (7356, stable_pretraining.callbacks.cpu_offload) |   - Total checkpoints saved: 2
+03:33:53.022 | INFO    (7356, stable_pretraining.callbacks.cpu_offload) |   - Total time in offload: 0.22s
+03:33:53.022 | INFO    (7356, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+03:33:53.022 | INFO    (7356, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.11s
+03:33:53.022 | INFO    (7356, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+03:33:53.022 | SUCCESS (7356, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+03:33:53.022 | INFO    (7356, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 0:41:41 •        15.97it/s v_num: 0.000
+                                         0:00:00                                
+03:33:53.314 | INFO    (7356, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> eval_rollout v5_baseline_40K
+03:34:13.355 | INFO    (8709, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+03:34:13.385 | INFO    (8709, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8329  mse=0.14640
+  per-dim R²: [0.948, 0.977, 0.962, 0.984, 0.998, 0.663, 0.297]
+
+saved /workspace/stablewm_home/v5_baseline_40K/eval.json
+===> final_analyses v5_baseline_40K
+03:34:54.178 | INFO    (8967, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+03:34:54.214 | INFO    (8967, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+03:34:54.267 | INFO    (8967, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8472
+  MLP   overall R² = 0.9242  (Δ = +0.0771)
+  per-dim Δ (MLP - Ridge) = ['+0.018', '+0.007', '-0.018', '-0.005', '+0.000', '+0.144', '+0.393']
+
+Saved /workspace/stablewm_home/v5_baseline_40K/final_analyses.json
+===> [03:35:56] v5_baseline_40K done in 2641s
+##### B4' (AutoDL) — frozen_uvlowr_40K (ffn_rank=4) #####
+===> [03:35:56] train_frozen v5_uvlowr_40K  steps=40000  overrides: +predictor.ffn_rank=4
+04:20:19.091 | INFO    (9251, stable_pretraining.callbacks.cpu_offload) |   - Total checkpoints saved: 2
+04:20:19.091 | INFO    (9251, stable_pretraining.callbacks.cpu_offload) |   - Total time in offload: 0.15s
+04:20:19.091 | INFO    (9251, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+04:20:19.091 | INFO    (9251, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.08s
+04:20:19.091 | INFO    (9251, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+04:20:19.091 | SUCCESS (9251, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+04:20:19.091 | INFO    (9251, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 0:44:07 •        15.55it/s v_num: 0.000
+                                         0:00:00                                
+04:20:19.349 | INFO    (9251, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> eval_rollout v5_uvlowr_40K
+04:20:39.555 | INFO    (10920, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+04:20:39.584 | INFO    (10920, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8329  mse=0.14640
+  per-dim R²: [0.948, 0.977, 0.962, 0.984, 0.998, 0.663, 0.297]
+
+saved /workspace/stablewm_home/v5_uvlowr_40K/eval.json
+===> final_analyses v5_uvlowr_40K
+04:21:21.151 | INFO    (11176, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+04:21:21.187 | INFO    (11176, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+04:21:21.241 | INFO    (11176, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8472
+  MLP   overall R² = 0.9242  (Δ = +0.0771)
+  per-dim Δ (MLP - Ridge) = ['+0.018', '+0.007', '-0.018', '-0.005', '+0.000', '+0.144', '+0.393']
+
+Saved /workspace/stablewm_home/v5_uvlowr_40K/final_analyses.json
+===> [04:22:23] v5_uvlowr_40K done in 2787s
+##### B9 — TwoRoom cross-dataset (PointMaze unavailable) #####
+===> Stage-1 PointMaze
+    items_s.append(b["state"][i, self.history_size - 1])
+    │       │      │          │  │    └ 3
+    │       │      │          │  └ <callbacks.ProbingCallback object at 0x7f9715bfa230>
+    │       │      │          └ 0
+    │       │      └ {'pixels': tensor([[[[[2.2489, 2.2489, 2.2489,  ..., 2.2489, 2.2489, 2.2489],
+    │       │                   [2.2489, 2.2489, 2.2489,  ..., 2.248...
+    │       └ <method 'append' of 'list' objects>
+    └ []
+
+KeyError: 'state'
+===> [04:22:34] train_frozen v5_tr_baseline_seed0  steps=8000  overrides: seed=0 data=tworoom
+    return _open_file(name_or_buffer, mode)
+           │          │               └ 'rb'
+           │          └ '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'
+           └ <class 'torch.serialization._open_file'>
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                          │     └ 'rb'
+                          └ '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'
+
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'
+===> eval_rollout v5_tr_baseline_seed0
+    main()
+  File "/workspace/le-wm/eval_rollout.py", line 276, in main
+    cfg = OmegaConf.load(cfg_path)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/omegaconf/omegaconf.py", line 189, in load
+    with io.open(os.path.abspath(file_), "r", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/v5_tr_baseline_seed0/config.yaml'
+===> final_analyses v5_tr_baseline_seed0
+         │  │    │  │    │       └ PosixPath('/workspace/stablewm_home/v5_tr_baseline_seed0/config.yaml')
+         │  │    │  │    └ <function abspath at 0x7fbc543a7400>
+         │  │    │  └ <module 'posixpath' from '/workspace/le-wm/.venv/lib/python3.10/posixpath.py'>
+         │  │    └ <module 'os' from '/workspace/le-wm/.venv/lib/python3.10/os.py'>
+         │  └ <built-in function open>
+         └ <module 'io' from '/workspace/le-wm/.venv/lib/python3.10/io.py'>
+
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/v5_tr_baseline_seed0/config.yaml'
+===> [04:22:50] v5_tr_baseline_seed0 done in 16s
+===> [04:22:50] train_frozen v5_tr_uvlowr_seed0  steps=8000  overrides: seed=0 data=tworoom +predictor.ffn_rank=4
+    return _open_file(name_or_buffer, mode)
+           │          │               └ 'rb'
+           │          └ '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'
+           └ <class 'torch.serialization._open_file'>
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                          │     └ 'rb'
+                          └ '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'
+
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'
+===> eval_rollout v5_tr_uvlowr_seed0
+    main()
+  File "/workspace/le-wm/eval_rollout.py", line 276, in main
+    cfg = OmegaConf.load(cfg_path)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/omegaconf/omegaconf.py", line 189, in load
+    with io.open(os.path.abspath(file_), "r", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/v5_tr_uvlowr_seed0/config.yaml'
+===> final_analyses v5_tr_uvlowr_seed0
+         │  │    │  │    │       └ PosixPath('/workspace/stablewm_home/v5_tr_uvlowr_seed0/config.yaml')
+         │  │    │  │    └ <function abspath at 0x7f6dbbc97400>
+         │  │    │  └ <module 'posixpath' from '/workspace/le-wm/.venv/lib/python3.10/posixpath.py'>
+         │  │    └ <module 'os' from '/workspace/le-wm/.venv/lib/python3.10/os.py'>
+         │  └ <built-in function open>
+         └ <module 'io' from '/workspace/le-wm/.venv/lib/python3.10/io.py'>
+
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/v5_tr_uvlowr_seed0/config.yaml'
+===> [04:23:05] v5_tr_uvlowr_seed0 done in 15s
+===> [04:23:05] train_frozen v5_tr_randdiff_seed0  steps=8000  overrides: seed=0 data=tworoom +loss.rand_diff.weight=0.01 +loss.rand_diff.eps=0.05 +loss.rand_diff.num_dirs=2
+    return _open_file(name_or_buffer, mode)
+           │          │               └ 'rb'
+           │          └ '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'
+           └ <class 'torch.serialization._open_file'>
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                          │     └ 'rb'
+                          └ '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'
+
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/stablewm_home/v5_tr_stage1/v5_tr_stage1_epoch_1_object.ckpt'

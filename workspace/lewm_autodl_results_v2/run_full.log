@@ -1,0 +1,213 @@
+SKIP baseline seed=0 (final_analyses.json exists)
+SKIP uvlowr_r4 seed=0 (final_analyses.json exists)
+===> train randdiff seed=0 (steps=40000)
+10:22:04.391 | INFO    (12888, stable_pretraining.callbacks.cpu_offload) |   - Total time in offload: 0.36s
+10:22:04.391 | INFO    (12888, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+10:22:04.391 | INFO    (12888, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.18s
+10:22:04.391 | INFO    (12888, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+10:22:04.392 | SUCCESS (12888, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+10:22:04.392 | INFO    (12888, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 1:16:21 • 0:00:00 8.94it/s v_num: 0.000
+10:22:04.853 | INFO    (12888, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> rollout eval randdiff seed=0
+10:22:36.174 | INFO    (15275, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+10:22:36.255 | INFO    (15275, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8758  mse=0.11175
+  per-dim R²: [0.958, 0.987, 0.988, 0.994, 0.999, 0.737, 0.466]
+
+saved /workspace/stablewm_home/randdiff_seed0/eval.json
+===> final analyses randdiff seed=0
+
+=== 3. MLP probe vs Ridge (n_tr=2048, n_te=512) ===
+10:23:54.095 | INFO    (15551, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+10:23:54.152 | INFO    (15551, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+10:23:54.248 | INFO    (15551, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8801
+  MLP   overall R² = 0.9193  (Δ = +0.0392)
+  per-dim Δ (MLP - Ridge) = ['-0.006', '-0.003', '-0.029', '-0.006', '-0.001', '+0.078', '+0.242']
+
+Saved /workspace/stablewm_home/randdiff_seed0/final_analyses.json
+===> train baseline seed=1 (steps=40000)
+11:24:02.470 | INFO    (15922, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+11:24:02.470 | INFO    (15922, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.18s
+11:24:02.470 | INFO    (15922, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+11:24:02.470 | SUCCESS (15922, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+11:24:02.470 | INFO    (15922, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 0:57:34 •        11.24it/s v_num: 0.000
+                                         0:00:00                                
+11:24:02.883 | INFO    (15922, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> rollout eval baseline seed=1
+11:24:31.825 | INFO    (17827, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+11:24:31.883 | INFO    (17827, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.9309  mse=0.06280
+  per-dim R²: [0.999, 0.999, 0.982, 0.996, 0.999, 0.827, 0.712]
+
+saved /workspace/stablewm_home/baseline_seed1/eval.json
+===> final analyses baseline seed=1
+
+=== 3. MLP probe vs Ridge (n_tr=2048, n_te=512) ===
+11:25:55.191 | INFO    (18103, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+11:25:55.243 | INFO    (18103, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+11:25:55.325 | INFO    (18103, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.9357
+  MLP   overall R² = 0.9759  (Δ = +0.0401)
+  per-dim Δ (MLP - Ridge) = ['-0.000', '+0.000', '-0.011', '-0.002', '-0.000', '+0.109', '+0.185']
+
+Saved /workspace/stablewm_home/baseline_seed1/final_analyses.json
+===> train uvlowr_r4 seed=1 (steps=40000)
+12:24:42.621 | INFO    (18394, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+12:24:42.621 | INFO    (18394, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.13s
+12:24:42.621 | INFO    (18394, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+12:24:42.621 | SUCCESS (18394, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+12:24:42.622 | INFO    (18394, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 0:56:20 •        12.27it/s v_num: 0.000
+                                         0:00:00                                
+12:24:43.002 | INFO    (18394, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> rollout eval uvlowr_r4 seed=1
+12:25:09.102 | INFO    (20231, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+12:25:09.148 | INFO    (20231, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8785  mse=0.11045
+  per-dim R²: [0.983, 0.99, 0.982, 0.992, 0.999, 0.725, 0.477]
+
+saved /workspace/stablewm_home/uvlowr_r4_seed1/eval.json
+===> final analyses uvlowr_r4 seed=1
+
+=== 3. MLP probe vs Ridge (n_tr=2048, n_te=512) ===
+12:26:18.311 | INFO    (20501, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+12:26:18.358 | INFO    (20501, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+12:26:18.429 | INFO    (20501, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8860
+  MLP   overall R² = 0.9366  (Δ = +0.0505)
+  per-dim Δ (MLP - Ridge) = ['-0.002', '+0.002', '-0.006', '-0.004', '-0.000', '+0.145', '+0.219']
+
+Saved /workspace/stablewm_home/uvlowr_r4_seed1/final_analyses.json
+===> train randdiff seed=1 (steps=40000)
+13:37:15.651 | INFO    (20790, stable_pretraining.callbacks.cpu_offload) |   - Total time in offload: 0.36s
+13:37:15.651 | INFO    (20790, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+13:37:15.651 | INFO    (20790, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.18s
+13:37:15.651 | INFO    (20790, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+13:37:15.652 | SUCCESS (20790, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+13:37:15.652 | INFO    (20790, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 1:08:38 • 0:00:00 9.33it/s v_num: 0.000
+13:37:16.071 | INFO    (20790, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> rollout eval randdiff seed=1
+13:37:46.337 | INFO    (22981, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+13:37:46.391 | INFO    (22981, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8822  mse=0.10643
+  per-dim R²: [0.959, 0.986, 0.991, 0.996, 0.999, 0.752, 0.491]
+
+saved /workspace/stablewm_home/randdiff_seed1/eval.json
+===> final analyses randdiff seed=1
+
+=== 3. MLP probe vs Ridge (n_tr=2048, n_te=512) ===
+13:39:12.210 | INFO    (23259, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+13:39:12.260 | INFO    (23259, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+13:39:12.335 | INFO    (23259, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8830
+  MLP   overall R² = 0.9022  (Δ = +0.0192)
+  per-dim Δ (MLP - Ridge) = ['-0.012', '-0.004', '-0.033', '-0.009', '-0.001', '+0.033', '+0.160']
+
+Saved /workspace/stablewm_home/randdiff_seed1/final_analyses.json
+===> train baseline seed=2 (steps=40000)
+14:40:19.252 | INFO    (23548, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+14:40:19.252 | INFO    (23548, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.18s
+14:40:19.252 | INFO    (23548, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+14:40:19.252 | SUCCESS (23548, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+14:40:19.252 | INFO    (23548, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 0:58:42 •        11.66it/s v_num: 0.000
+                                         0:00:00                                
+14:40:19.652 | INFO    (23548, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> rollout eval baseline seed=2
+14:40:59.325 | INFO    (25440, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+14:40:59.386 | INFO    (25440, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8620  mse=0.12253
+  per-dim R²: [0.96, 0.986, 0.971, 0.993, 0.999, 0.694, 0.43]
+
+saved /workspace/stablewm_home/baseline_seed2/eval.json
+===> final analyses baseline seed=2
+
+=== 3. MLP probe vs Ridge (n_tr=2048, n_te=512) ===
+14:42:16.736 | INFO    (25780, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+14:42:16.786 | INFO    (25780, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+14:42:16.865 | INFO    (25780, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8710
+  MLP   overall R² = 0.9302  (Δ = +0.0592)
+  per-dim Δ (MLP - Ridge) = ['+0.010', '+0.000', '-0.021', '-0.011', '-0.001', '+0.153', '+0.284']
+
+Saved /workspace/stablewm_home/baseline_seed2/final_analyses.json
+===> train uvlowr_r4 seed=2 (steps=40000)
+15:43:14.764 | INFO    (26086, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+15:43:14.764 | INFO    (26086, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.14s
+15:43:14.764 | INFO    (26086, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+15:43:14.764 | SUCCESS (26086, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+15:43:14.764 | INFO    (26086, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 0:57:56 •        11.12it/s v_num: 0.000
+                                         0:00:00                                
+15:43:15.171 | INFO    (26086, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> rollout eval uvlowr_r4 seed=2
+15:43:46.024 | INFO    (27990, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+15:43:46.077 | INFO    (27990, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8406  mse=0.14190
+  per-dim R²: [0.945, 0.978, 0.977, 0.991, 0.999, 0.657, 0.336]
+
+saved /workspace/stablewm_home/uvlowr_r4_seed2/eval.json
+===> final analyses uvlowr_r4 seed=2
+
+=== 3. MLP probe vs Ridge (n_tr=2048, n_te=512) ===
+15:45:18.154 | INFO    (28275, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+15:45:18.213 | INFO    (28275, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+15:45:18.314 | INFO    (28275, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8466
+  MLP   overall R² = 0.9305  (Δ = +0.0839)
+  per-dim Δ (MLP - Ridge) = ['+0.013', '+0.006', '-0.018', '-0.007', '-0.001', '+0.183', '+0.410']
+
+Saved /workspace/stablewm_home/uvlowr_r4_seed2/final_analyses.json
+===> train randdiff seed=2 (steps=40000)
+16:57:15.968 | INFO    (28572, stable_pretraining.callbacks.cpu_offload) |   - Total time in offload: 0.37s
+16:57:15.968 | INFO    (28572, stable_pretraining.callbacks.cpu_offload) |   - Total GPU memory freed: 0.00 GB
+16:57:15.968 | INFO    (28572, stable_pretraining.callbacks.cpu_offload) |   - Average time per checkpoint: 0.19s
+16:57:15.968 | INFO    (28572, stable_pretraining.callbacks.cpu_offload) |   - Average memory freed per checkpoint: 0.00 GB
+16:57:15.968 | SUCCESS (28572, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: All checkpoints saved successfully
+16:57:15.968 | INFO    (28572, stable_pretraining.callbacks.cpu_offload) | ============================================================
+Epoch 0/0  ━━━━━━━━━━━━━━━━━ 40000/40000 1:09:15 • 0:00:00 9.48it/s v_num: 0.000
+16:57:16.410 | INFO    (28572, stable_pretraining.callbacks.cpu_offload) | CPUOffloadCallback: Teardown called for stage 'fit'
+===> rollout eval randdiff seed=2
+16:57:43.327 | INFO    (30743, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+16:57:43.377 | INFO    (30743, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  overall_r2 = 0.8559  mse=0.12838
+  per-dim R²: [0.939, 0.982, 0.984, 0.995, 0.999, 0.729, 0.363]
+
+saved /workspace/stablewm_home/randdiff_seed2/eval.json
+===> final analyses randdiff seed=2
+
+=== 3. MLP probe vs Ridge (n_tr=2048, n_te=512) ===
+16:58:53.011 | INFO    (31041, stable_pretraining) | Cached 'action' from '/workspace/stablewm_home/pusht_expert_train.h5'
+16:58:53.057 | INFO    (31041, stable_pretraining) | Cached 'proprio' from '/workspace/stablewm_home/pusht_expert_train.h5'
+16:58:53.127 | INFO    (31041, stable_pretraining) | Cached 'state' from '/workspace/stablewm_home/pusht_expert_train.h5'
+  Ridge overall R² = 0.8611
+  MLP   overall R² = 0.8901  (Δ = +0.0290)
+  per-dim Δ (MLP - Ridge) = ['-0.005', '-0.003', '-0.020', '-0.009', '-0.002', '+0.053', '+0.189']
+
+Saved /workspace/stablewm_home/randdiff_seed2/final_analyses.json
+Aggregated 3 seeds into aggregated/baseline/
+  training_curve.csv:  820 rows
+  jacobian_curve.csv:  81 rows
+  probing_curve.csv:   81 rows
+  latent_cov_curve.csv: 81 rows
+  rollout_summary.csv: 6 horizons
+  engineering: predictor_params 10791360 peak_mb 3838.7 wall_s 3492.8
+Aggregated 3 seeds into aggregated/uvlowr_r4/
+  training_curve.csv:  820 rows
+  jacobian_curve.csv:  81 rows
+  probing_curve.csv:   81 rows
+  latent_cov_curve.csv: 81 rows
+  rollout_summary.csv: 6 horizons
+  engineering: predictor_params 6180288 peak_mb 3763.6 wall_s 3410.5
+Aggregated 3 seeds into aggregated/randdiff/
+  training_curve.csv:  820 rows
+  jacobian_curve.csv:  81 rows
+  probing_curve.csv:   81 rows
+  latent_cov_curve.csv: 81 rows
+  rollout_summary.csv: 6 horizons
+  engineering: predictor_params 10791360 peak_mb 3809.8 wall_s 4290.1
+DONE_FULL_PIPELINE  steps=40000

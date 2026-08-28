@@ -1,0 +1,104 @@
+{
+  "variant": "uvlowr_r4",
+  "n_seeds": 3,
+  "run_dirs": [
+    "/workspace/stablewm_home/uvlowr_r4_seed0",
+    "/workspace/stablewm_home/uvlowr_r4_seed1",
+    "/workspace/stablewm_home/uvlowr_r4_seed2"
+  ],
+  "engineering": {
+    "n_seeds": 3,
+    "predictor_params_mean": 6180288,
+    "predictor_params_std": 0.0,
+    "encoder_params_mean": 5501376,
+    "encoder_params_std": 0.0,
+    "total_params_mean": 13423406,
+    "total_params_std": 0.0,
+    "peak_gpu_memory_mb_mean": 3433.07470703125,
+    "peak_gpu_memory_mb_std": 0.0,
+    "wall_clock_s_mean": 334.8433042367299,
+    "wall_clock_s_std": 1.0818939684444047,
+    "global_step_mean": 5000,
+    "global_step_std": 0.0
+  },
+  "eval": {
+    "rollout": [
+      {
+        "horizon": 1,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 5,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 10,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 20,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 50,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      }
+    ],
+    "probe": {
+      "n_seeds": 3,
+      "overall_r2_mean": 0.8184175690015157,
+      "overall_r2_std": 0.004058131610213419,
+      "mse_mean": 0.15292303760846457,
+      "mse_std": 0.004674899108168953,
+      "per_dim": [
+        {
+          "dim": 0,
+          "r2_mean": 0.9580768148104349,
+          "r2_std": 0.009047418848502374
+        },
+        {
+          "dim": 1,
+          "r2_mean": 0.9813251296679179,
+          "r2_std": 0.0026687381097983847
+        },
+        {
+          "dim": 2,
+          "r2_mean": 0.9327264626820883,
+          "r2_std": 0.006798435625327809
+        },
+        {
+          "dim": 3,
+          "r2_mean": 0.9554785092671713,
+          "r2_std": 0.005090045895484955
+        },
+        {
+          "dim": 4,
+          "r2_mean": 0.994858980178833,
+          "r2_std": 0.001157161164219782
+        },
+        {
+          "dim": 5,
+          "r2_mean": 0.6445284287134806,
+          "r2_std": 0.00808310138041248
+        },
+        {
+          "dim": 6,
+          "r2_mean": 0.26192887624104816,
+          "r2_std": 0.029764912285367755
+        }
+      ]
+    }
+  },
+  "training_curve_n_steps": 120,
+  "jacobian_curve_n_steps": 11
+}

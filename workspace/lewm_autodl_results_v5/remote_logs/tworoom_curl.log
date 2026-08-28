@@ -1,0 +1,17 @@
+start curl @ Wed May 13 03:56:18 CST 2026
+size=49 time=1.114252s avg_speed=43.000
+done curl @ Wed May 13 03:56:19 CST 2026
+-rw-r--r-- 1 root root 3.2G May 13 03:56 tworoom.tar.zst
+=== extracting
+extracted
+total 61037844
+drwxr-xr-x 6 root       root              4096 May 13 03:56 .
+drwxr-xr-x 5 root       root              4096 May 13 03:56 ..
+drwxr-xr-x 3 root       root              4096 May 13 02:27 .cache
+drwxr-xr-x 3 root       root              4096 May 13 02:51 autodl_sanity
+-rw-r--r-- 1 root       root       46300921856 May 13 02:44 pusht_expert_train.h5
+-rw-rw-r-- 1 1500000921 1500000921 12775849984 Feb  2 05:19 tworoom.h5
+-rw-r--r-- 1 root       root        3425937909 May 13 03:56 tworoom.tar.zst
+drwxr-xr-x 3 root       root              4096 May 13 03:35 v5_baseline_40K
+drwxr-xr-x 3 root       root              4096 May 13 03:36 v5_uvlowr_40K
+TWOROOM DONE

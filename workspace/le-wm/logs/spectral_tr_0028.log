@@ -1,0 +1,80 @@
+=== spectral_postprocess v5_tr_baseline_seed0_epoch_1_object.ckpt ===
+00:29:03.187 | INFO    (1599, stable_pretraining.backbone.utils) | Created ViT-tiny from scratch with config: {'hidden_size': 192, 'num_hidden_layers': 12, 'num_attention_heads': 3, 'intermediate_size': 768, 'image_size': 224, 'patch_size': 14}
+loading weights from /workspace/lewm_autodl_results_v5/v5_tr_baseline_seed0/v5_tr_baseline_seed0_weights.ckpt
+Traceback (most recent call last):
+  File "/workspace/le-wm/spectral_postprocess.py", line 173, in <module>
+    main()
+  File "/workspace/le-wm/spectral_postprocess.py", line 119, in main
+    ds = build_dataset(cfg, num_steps_override=history_size)
+  File "/workspace/le-wm/eval_rollout.py", line 89, in build_dataset
+    dataset = swm.data.HDF5Dataset(**ds_cfg, transform=None)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/data/dataset.py", line 134, in __init__
+    with h5py.File(self.h5_path, 'r') as f:
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 555, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 232, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/workspace/stablewm_home/tworoom.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+=== spectral_postprocess v5_tr_baseline_seed1_epoch_1_object.ckpt ===
+00:29:13.043 | INFO    (1647, stable_pretraining.backbone.utils) | Created ViT-tiny from scratch with config: {'hidden_size': 192, 'num_hidden_layers': 12, 'num_attention_heads': 3, 'intermediate_size': 768, 'image_size': 224, 'patch_size': 14}
+loading weights from /workspace/lewm_autodl_results_v5/v5_tr_baseline_seed1/v5_tr_baseline_seed1_weights.ckpt
+Traceback (most recent call last):
+  File "/workspace/le-wm/spectral_postprocess.py", line 173, in <module>
+    main()
+  File "/workspace/le-wm/spectral_postprocess.py", line 119, in main
+    ds = build_dataset(cfg, num_steps_override=history_size)
+  File "/workspace/le-wm/eval_rollout.py", line 89, in build_dataset
+    dataset = swm.data.HDF5Dataset(**ds_cfg, transform=None)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/data/dataset.py", line 134, in __init__
+    with h5py.File(self.h5_path, 'r') as f:
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 555, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 232, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/workspace/stablewm_home/tworoom.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+=== spectral_postprocess v5_tr_uvlowr_seed0_epoch_1_object.ckpt ===
+00:29:22.238 | INFO    (1693, stable_pretraining.backbone.utils) | Created ViT-tiny from scratch with config: {'hidden_size': 192, 'num_hidden_layers': 12, 'num_attention_heads': 3, 'intermediate_size': 768, 'image_size': 224, 'patch_size': 14}
+loading weights from /workspace/lewm_autodl_results_v5/v5_tr_uvlowr_seed0/v5_tr_uvlowr_seed0_weights.ckpt
+Traceback (most recent call last):
+  File "/workspace/le-wm/spectral_postprocess.py", line 173, in <module>
+    main()
+  File "/workspace/le-wm/spectral_postprocess.py", line 119, in main
+    ds = build_dataset(cfg, num_steps_override=history_size)
+  File "/workspace/le-wm/eval_rollout.py", line 89, in build_dataset
+    dataset = swm.data.HDF5Dataset(**ds_cfg, transform=None)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/data/dataset.py", line 134, in __init__
+    with h5py.File(self.h5_path, 'r') as f:
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 555, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 232, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/workspace/stablewm_home/tworoom.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+=== spectral_postprocess v5_tr_uvlowr_seed1_epoch_1_object.ckpt ===
+00:29:31.310 | INFO    (1740, stable_pretraining.backbone.utils) | Created ViT-tiny from scratch with config: {'hidden_size': 192, 'num_hidden_layers': 12, 'num_attention_heads': 3, 'intermediate_size': 768, 'image_size': 224, 'patch_size': 14}
+loading weights from /workspace/lewm_autodl_results_v5/v5_tr_uvlowr_seed1/v5_tr_uvlowr_seed1_weights.ckpt
+Traceback (most recent call last):
+  File "/workspace/le-wm/spectral_postprocess.py", line 173, in <module>
+    main()
+  File "/workspace/le-wm/spectral_postprocess.py", line 119, in main
+    ds = build_dataset(cfg, num_steps_override=history_size)
+  File "/workspace/le-wm/eval_rollout.py", line 89, in build_dataset
+    dataset = swm.data.HDF5Dataset(**ds_cfg, transform=None)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/stable_worldmodel/data/dataset.py", line 134, in __init__
+    with h5py.File(self.h5_path, 'r') as f:
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 555, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/workspace/le-wm/.venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 232, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/workspace/stablewm_home/tworoom.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)

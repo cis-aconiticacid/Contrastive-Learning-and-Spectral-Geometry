@@ -1,0 +1,89 @@
+{
+  "config": {
+    "d": 64,
+    "action_dim": 4,
+    "history_size": 3,
+    "n_preds": 1,
+    "rollout_T": 8,
+    "N_train": 4096,
+    "N_val": 512,
+    "steps": 2000,
+    "batch": 128,
+    "seed": 0,
+    "reg_weight": 0.05,
+    "ffn_rank": 8,
+    "predictor_kwargs": {
+      "d": 64,
+      "action_dim": 4,
+      "num_frames": 3,
+      "depth": 3,
+      "heads": 4,
+      "dim_head": 32,
+      "mlp_dim": 256,
+      "dropout": 0.0
+    },
+    "device": "cuda"
+  },
+  "results": [
+    {
+      "name": "baseline",
+      "params": 278208,
+      "final_train_pred_mse": 0.01012534525245428,
+      "final_reg_value": 0.0,
+      "per_step_rollout_mse": [
+        0.011859421618282795,
+        0.024700038135051727,
+        0.05213572829961777,
+        0.09881953150033951,
+        0.1717105209827423,
+        0.2744659185409546
+      ],
+      "rollout_1step": 0.011859421618282795,
+      "rollout_4step": 0.09881953150033951,
+      "rollout_last": 0.2744659185409546,
+      "peak_mem_mb": 48.30517578125,
+      "wall_time_s": 12.607527494430542,
+      "mean_step_ms": 5.970190763473511
+    },
+    {
+      "name": "uv_lowr",
+      "params": 195264,
+      "final_train_pred_mse": 0.01018996374681592,
+      "final_reg_value": 0.0,
+      "per_step_rollout_mse": [
+        0.011987647041678429,
+        0.024921555072069168,
+        0.0522809773683548,
+        0.09871212393045425,
+        0.1713825911283493,
+        0.2736116647720337
+      ],
+      "rollout_1step": 0.011987647041678429,
+      "rollout_4step": 0.09871212393045425,
+      "rollout_last": 0.2736116647720337,
+      "peak_mem_mb": 47.29736328125,
+      "wall_time_s": 16.744051694869995,
+      "mean_step_ms": 8.022741556167603
+    },
+    {
+      "name": "rand_diff",
+      "params": 278208,
+      "final_train_pred_mse": 0.012774442043155431,
+      "final_reg_value": 0.7582035481929779,
+      "per_step_rollout_mse": [
+        0.01590212807059288,
+        0.03300735354423523,
+        0.06503384560346603,
+        0.11746666580438614,
+        0.19666561484336853,
+        0.30654701590538025
+      ],
+      "rollout_1step": 0.01590212807059288,
+      "rollout_4step": 0.11746666580438614,
+      "rollout_last": 0.30654701590538025,
+      "peak_mem_mb": 101.02685546875,
+      "wall_time_s": 75.90912175178528,
+      "mean_step_ms": 37.53079128265381
+    }
+  ]
+}

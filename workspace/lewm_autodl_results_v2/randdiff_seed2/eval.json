@@ -1,0 +1,62 @@
+{
+  "ckpt": "/workspace/stablewm_home/randdiff_seed2/randdiff_seed2_epoch_1_object.ckpt",
+  "weights": "/workspace/stablewm_home/randdiff_seed2/randdiff_seed2_weights.ckpt",
+  "rollout_horizons": [
+    1,
+    3,
+    5,
+    10,
+    15,
+    20
+  ],
+  "rollout_results": [
+    {
+      "horizon": 1,
+      "mse_per_step": 0.0021283863025018945,
+      "n_samples": 256
+    },
+    {
+      "horizon": 3,
+      "mse_per_step": 0.03481223154813051,
+      "n_samples": 256
+    },
+    {
+      "horizon": 5,
+      "mse_per_step": 0.22392259631305933,
+      "n_samples": 256
+    },
+    {
+      "horizon": 10,
+      "mse_per_step": 0.6907593943178654,
+      "n_samples": 256
+    },
+    {
+      "horizon": 15,
+      "mse_per_step": 0.8584389425814152,
+      "n_samples": 256
+    },
+    {
+      "horizon": 20,
+      "mse_per_step": 1.2103891745209694,
+      "n_samples": 256
+    }
+  ],
+  "rollout_eval_seconds": 16.77668046951294,
+  "probe": {
+    "n_train": 1024,
+    "n_test": 256,
+    "overall_r2": 0.8558812141418457,
+    "per_dim_r2": [
+      0.9392932653427124,
+      0.981801450252533,
+      0.9840940237045288,
+      0.9951247572898865,
+      0.9993221759796143,
+      0.7285412549972534,
+      0.3629918098449707
+    ],
+    "mse": 0.12838482856750488,
+    "ridge_alpha": 1.0
+  },
+  "probe_eval_seconds": 57.39116358757019
+}

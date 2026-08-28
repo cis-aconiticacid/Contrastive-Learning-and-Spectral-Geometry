@@ -1,0 +1,104 @@
+{
+  "variant": "baseline",
+  "n_seeds": 3,
+  "run_dirs": [
+    "/workspace/stablewm_home/baseline_seed0",
+    "/workspace/stablewm_home/baseline_seed1",
+    "/workspace/stablewm_home/baseline_seed2"
+  ],
+  "engineering": {
+    "n_seeds": 3,
+    "predictor_params_mean": 10791360,
+    "predictor_params_std": 0.0,
+    "encoder_params_mean": 5501376,
+    "encoder_params_std": 0.0,
+    "total_params_mean": 18034478,
+    "total_params_std": 0.0,
+    "peak_gpu_memory_mb_mean": 3508.73095703125,
+    "peak_gpu_memory_mb_std": 0.0,
+    "wall_clock_s_mean": 336.2972325483958,
+    "wall_clock_s_std": 0.5479444924228455,
+    "global_step_mean": 5000,
+    "global_step_std": 0.0
+  },
+  "eval": {
+    "rollout": [
+      {
+        "horizon": 1,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 5,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 10,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 20,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      },
+      {
+        "horizon": 50,
+        "mse_mean": 0.0,
+        "mse_std": 0.0,
+        "n_seeds": 3
+      }
+    ],
+    "probe": {
+      "n_seeds": 3,
+      "overall_r2_mean": 0.8229718406995138,
+      "overall_r2_std": 0.008236836454763467,
+      "mse_mean": 0.14951014518737793,
+      "mse_std": 0.0052603134979210325,
+      "per_dim": [
+        {
+          "dim": 0,
+          "r2_mean": 0.9494971434275309,
+          "r2_std": 0.005826371887530068
+        },
+        {
+          "dim": 1,
+          "r2_mean": 0.9790621598561605,
+          "r2_std": 0.004897084232234611
+        },
+        {
+          "dim": 2,
+          "r2_mean": 0.9473672111829122,
+          "r2_std": 0.010144859643974899
+        },
+        {
+          "dim": 3,
+          "r2_mean": 0.9542212883631388,
+          "r2_std": 0.007219667807076959
+        },
+        {
+          "dim": 4,
+          "r2_mean": 0.9945986072222391,
+          "r2_std": 0.0004471977665471214
+        },
+        {
+          "dim": 5,
+          "r2_mean": 0.6745753486951193,
+          "r2_std": 0.008234839521222783
+        },
+        {
+          "dim": 6,
+          "r2_mean": 0.2614813248316447,
+          "r2_std": 0.027326048671953717
+        }
+      ]
+    }
+  },
+  "training_curve_n_steps": 120,
+  "jacobian_curve_n_steps": 11
+}

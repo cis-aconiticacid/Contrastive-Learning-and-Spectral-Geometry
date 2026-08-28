@@ -1,0 +1,94 @@
+===> batch2 start at Fri May 15 09:49:23 UTC 2026
+
+===> [1/7] 09:49:23 BEGIN v5_randdiff_20K
+  sample 1: lam_max=0.9652  n_unstable=0  abscissa=0.9652
+  sample 2: lam_max=0.9904  n_unstable=0  abscissa=0.9831
+  sample 3: lam_max=0.9861  n_unstable=0  abscissa=0.9805
+  sample 4: lam_max=0.9961  n_unstable=0  abscissa=0.9892
+  sample 5: lam_max=1.0094  n_unstable=2  abscissa=0.9992
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 3.42  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 3.58  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/stablewm_home/v5_randdiff_20K/final_analyses.json
+===> [1/7] DONE v5_randdiff_20K in 37s
+
+===> [2/7] 09:50:00 BEGIN v5_baseline_40K
+  sample 1: lam_max=1.4703  n_unstable=1  abscissa=1.4703
+  sample 2: lam_max=1.8112  n_unstable=1  abscissa=1.8112
+  sample 3: lam_max=1.7065  n_unstable=1  abscissa=1.7065
+  sample 4: lam_max=1.9953  n_unstable=1  abscissa=1.9953
+  sample 5: lam_max=2.2967  n_unstable=1  abscissa=2.2967
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 3.42  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 3.72  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/lewm_autodl_results_v5/v5_baseline_40K/final_analyses.json
+===> [2/7] DONE v5_baseline_40K in 36s
+
+===> [3/7] 09:50:36 BEGIN v5_uvlowr_40K
+  sample 1: lam_max=1.2361  n_unstable=1  abscissa=1.2361
+  sample 2: lam_max=1.3639  n_unstable=1  abscissa=1.3639
+  sample 3: lam_max=1.3770  n_unstable=1  abscissa=1.3770
+  sample 4: lam_max=1.4436  n_unstable=1  abscissa=1.4436
+  sample 5: lam_max=1.7406  n_unstable=3  abscissa=1.7406
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 3.42  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 3.88  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/lewm_autodl_results_v5/v5_uvlowr_40K/final_analyses.json
+===> [3/7] DONE v5_uvlowr_40K in 34s
+
+===> [4/7] 09:51:10 BEGIN baseline_long
+  sample 1: lam_max=0.7496  n_unstable=0  abscissa=0.7496
+  sample 2: lam_max=0.7480  n_unstable=0  abscissa=0.7480
+  sample 3: lam_max=0.7477  n_unstable=0  abscissa=0.7477
+  sample 4: lam_max=0.7508  n_unstable=0  abscissa=0.7508
+  sample 5: lam_max=0.7593  n_unstable=0  abscissa=0.7593
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 5.18  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 6.05  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/stablewm_home/baseline_long/final_analyses.json
+===> [4/7] DONE baseline_long in 37s
+
+===> [5/7] 09:51:47 BEGIN uvlowr_r4_long
+  sample 1: lam_max=0.7307  n_unstable=0  abscissa=0.7307
+  sample 2: lam_max=0.7330  n_unstable=0  abscissa=0.7330
+  sample 3: lam_max=0.7349  n_unstable=0  abscissa=0.7349
+  sample 4: lam_max=0.7337  n_unstable=0  abscissa=0.7337
+  sample 5: lam_max=0.7428  n_unstable=0  abscissa=0.7428
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 4.95  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 5.40  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/stablewm_home/uvlowr_r4_long/final_analyses.json
+===> [5/7] DONE uvlowr_r4_long in 36s
+
+===> [6/7] 09:52:23 BEGIN randdiff_lam001_long
+  sample 1: lam_max=0.7853  n_unstable=0  abscissa=0.7853
+  sample 2: lam_max=0.7768  n_unstable=0  abscissa=0.7768
+  sample 3: lam_max=0.7823  n_unstable=0  abscissa=0.7823
+  sample 4: lam_max=0.7855  n_unstable=0  abscissa=0.7855
+  sample 5: lam_max=0.7941  n_unstable=0  abscissa=0.7941
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 5.47  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 5.57  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/stablewm_home/randdiff_lam001_long/final_analyses.json
+===> [6/7] DONE randdiff_lam001_long in 35s
+
+===> [7/7] 09:52:58 BEGIN tier1_baseline
+  sample 1: lam_max=1.2566  n_unstable=3  abscissa=1.2566
+  sample 2: lam_max=1.2646  n_unstable=3  abscissa=1.2646
+  sample 3: lam_max=1.2843  n_unstable=3  abscissa=1.2843
+  sample 4: lam_max=1.3109  n_unstable=3  abscissa=1.3109
+  sample 5: lam_max=1.2637  n_unstable=3  abscissa=1.2637
+  collecting encoder latents for TwoNN...
+  TwoNN(encoder)   = 3.42  (N=2048, D=192)
+  collecting predictor latents for TwoNN...
+  TwoNN(predictor) = 3.60  (N=2048, D=192)
+  wrote spectral_eig + twonn_{enc,pred}_intrinsic_dim -> /workspace/stablewm_home/tier1_baseline/final_analyses.json
+===> [7/7] DONE tier1_baseline in 35s
+
+===> batch2 complete at Fri May 15 09:53:33 UTC 2026
