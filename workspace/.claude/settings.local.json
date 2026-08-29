@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(mkdir -p /workspace/handoff_secrets/autoDL)",
-      "Bash(cp /root/.claude/skills/autoDL/.env /workspace/handoff_secrets/autoDL/.env)"
-    ]
-  }
-}
